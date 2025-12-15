@@ -1,16 +1,121 @@
 <!DOCTYPE html>
-<html lang = 'vi'>
-	<head>
-		<meta charset = "utf-8">
-		<title> Trang web cá nhân </title>
-	</head>
-	<body>
-		<h1> Trang web cá nhân của Khánh Vy </h1>
-		<h2> Thông tin cá nhân </h2>
-		<p> Họ và tên: Phạm Nguyễn Khánh Vy </p>
-		<p> Sinh năm: 2008 </p>
-		<p> Trường học: <a href ="https://thptchuyenphanboichau.edu.vn/"> Phan Bội Châu </a> </p>
-		<h2> Môn học yêu thích </h2>
-		<p> <a href="monhoc.html"> Môn học </a> </p>
-	</body>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch học nghệ thuật</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 99%;
+            height: 650px;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        caption {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .personal-info {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .personal-info img {
+            border-radius: 50%;
+            margin-right: 20px;
+            width: 100px;
+            height: 100px;
+        }
+        .personal-info div {
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Thông tin cá nhân -->
+    <div class="personal-info">
+        <!-- Sử dụng ảnh placeholder (có thể thay thế bằng ảnh thực tế) -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFNNewLkcrxxayU5gIEAbDcCkq8hPTWAUGgQ&s" alt="Ảnh đại diện">
+        <div>
+            <h2>Phạm Nguyễn Khánh Vy</h2>
+            <p><strong>Ngày sinh:</strong> 05/06/2008</p>
+            <p><strong>Học sinh lớp:</strong> 12A2</p>
+            <p> Trường học: <a href ="https://thptchuyenphanboichau.edu.vn/"> THPT chuyên Phan Bội Châu </a> </p>
+            <h2> Môn học yêu thích </h2>
+            <p> <a href="monhoc.html"> Môn học </a> </p>
+            <p>
+        </div>
+    </div>
+
+    <!-- Bảng lịch học -->
+    <table>
+        <caption>Lịch học các môn nghệ thuật</caption>
+        <tr>
+            <th rowspan="2">Bộ môn</th>
+            <th rowspan="2">GV phụ trách</th>
+            <th colspan="5">Ngày</th>
+        </tr>
+        <tr>
+            <th>Thứ 2</th>
+            <th>Thứ 3</th>
+            <th>Thứ 4</th>
+            <th>Thứ 5</th>
+            <th>Thứ 6</th>
+        </tr>
+        <tr>
+            <td>Guitar</td>
+            <td>Thầy Minh</td>
+            <td></td>
+            <td>X</td>
+            <td></td>
+            <td>X</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Piano</td>
+            <td>Cô Lan</td>
+            <td>X</td>
+            <td></td>
+            <td>X</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Tranh vẽ</td>
+            <td>Thầy Vũ</td>
+            <td></td>
+            <td></td>
+            <td>X</td>
+            <td></td>
+            <td>X</td>
+        </tr>
+        <tr>
+            <td>Múa</td>
+            <td>Cô Hoa</td>
+            <td>X</td>
+            <td></td>
+            <td>X</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Hát</td>
+            <td>Thầy Duy</td>
+            <td></td>
+            <td>X</td>
+            <td></td>
+            <td>X</td>
+            <td></td>
+        </tr>
+    </table>
+</body>
 </html>
