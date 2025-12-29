@@ -2,120 +2,72 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lịch học nghệ thuật</title>
+    <title>Merry Christmas</title>
     <style>
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        table {
-            width: 99%;
-            height: 650px;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
+            background: linear-gradient(#0f2027, #203a43, #2c5364);
+            color: white;
             text-align: center;
+            overflow: hidden;
         }
-        caption {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
+
+        h1 {
+            margin-top: 80px;
+            font-size: 60px;
+            color: #ff4d4d;
         }
-        .personal-info {
-            display: flex;
-            margin-bottom: 20px;
+
+        p {
+            font-size: 22px;
         }
-        .personal-info img {
-            border-radius: 50%;
-            margin-right: 20px;
-            width: 100px;
-            height: 100px;
+
+        .tree {
+            font-size: 120px;
+            margin-top: 30px;
         }
-        .personal-info div {
-            max-width: 300px;
+
+        /* Tuyết rơi */
+        .snow {
+            position: fixed;
+            top: -10px;
+            color: white;
+            font-size: 20px;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Thông tin cá nhân -->
-    <div class="personal-info">
-        <!-- Sử dụng ảnh placeholder (có thể thay thế bằng ảnh thực tế) -->
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFNNewLkcrxxayU5gIEAbDcCkq8hPTWAUGgQ&s" alt="Ảnh đại diện">
-        <div>
-            <h2>Phạm Nguyễn Khánh Vy</h2>
-            <p><strong>Ngày sinh:</strong> 05/06/2008</p>
-            <p><strong>Học sinh lớp:</strong> 12A2</p>
-            <p> Trường học: <a href ="https://thptchuyenphanboichau.edu.vn/"> THPT chuyên Phan Bội Châu </a> </p>
-            <h2> Môn học yêu thích </h2>
-            <p> <a href="monhoc.html"> Môn học </a> </p>
-            <p>
-        </div>
-    </div>
 
-    <!-- Bảng lịch học -->
-    <table>
-        <caption>Lịch học các môn nghệ thuật</caption>
-        <tr>
-            <th rowspan="2">Bộ môn</th>
-            <th rowspan="2">GV phụ trách</th>
-            <th colspan="5">Ngày</th>
-        </tr>
-        <tr>
-            <th>Thứ 2</th>
-            <th>Thứ 3</th>
-            <th>Thứ 4</th>
-            <th>Thứ 5</th>
-            <th>Thứ 6</th>
-        </tr>
-        <tr>
-            <td>Guitar</td>
-            <td>Thầy Minh</td>
-            <td></td>
-            <td>X</td>
-            <td></td>
-            <td>X</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Piano</td>
-            <td>Cô Lan</td>
-            <td>X</td>
-            <td></td>
-            <td>X</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Tranh vẽ</td>
-            <td>Thầy Vũ</td>
-            <td></td>
-            <td></td>
-            <td>X</td>
-            <td></td>
-            <td>X</td>
-        </tr>
-        <tr>
-            <td>Múa</td>
-            <td>Cô Hoa</td>
-            <td>X</td>
-            <td></td>
-            <td>X</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Hát</td>
-            <td>Thầy Duy</td>
-            <td></td>
-            <td>X</td>
-            <td></td>
-            <td>X</td>
-            <td></td>
-        </tr>
-    </table>
+    <h1>🎄 Merry Christmas 🎄</h1>
+    <p>Chúc bạn một mùa Giáng Sinh an lành và ấm áp</p>
+
+    <div class="tree">🎄</div>
+
+    <script>
+        function createSnow() {
+            const snow = document.createElement("div");
+            snow.classList.add("snow");
+            snow.innerHTML = "❄";
+            snow.style.left = Math.random() * window.innerWidth + "px";
+            snow.style.animationDuration = Math.random() * 3 + 2 + "s";
+            snow.style.opacity = Math.random();
+            document.body.appendChild(snow);
+
+            setTimeout(() => {
+                snow.remove();
+            }, 5000);
+        }
+
+        setInterval(createSnow, 200);
+    </script>
+
 </body>
 </html>
